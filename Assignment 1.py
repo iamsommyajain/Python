@@ -118,3 +118,78 @@ else :
     print("Strings are not anagrams")
 
 #Question 19 - Write a python program that checks if a given string is a palindrome.
+str=input("Enter a string :")
+for i in str :
+    if i.isalnum():
+        print(i,end="")
+
+#Question 20 - Write a python program that takes a list of numbers and returns their sum. 
+l=eval(input("Enter a list of numbers :"))
+sum=0
+for i in l:
+    sum+=i
+print(sum)
+
+#Question 21 - Write a python program that counts the occurrences of a specific element in a list. 
+l=eval(input("Enter a list of numbers :"))
+e=int(input("Enter the element you want to count :"))
+count=0
+for i in l :
+    if i==e :
+        count+=1
+print(count)
+
+#Question 22 - Write a python program that returns the minimum and maximum values in a list of numbers. 
+l=eval(input("Enter a list of numbers :"))
+print("Minimum value :",min(l))
+print("Maximum value :",max(l))
+
+#Question 23 - Write a program that converts temperature from Celsius to Fahrenheit and vice versa based on user input. 
+scale=input("Choose Celsius(C) or Fahrenheit(F) :")
+if (scale=='C') :
+    temp=float(input("Enter temperature in Celsius :"))
+    print("Temperature in Fahrenheit :",(temp*9/5)+32)
+else :
+    temp=float(input("Enter temperature in Fahrenheit :"))
+    print("Temperature in Celsius :",(temp-32)*5/9)
+
+#Question 24 - Write a program that acts as a simple calculator. It should take two numbers and an operator (+, -, *, /) as input and print the result.
+a=float(input("Enter first number :"))
+op=input("Enter operator (+, -, *, /) :")
+b=float(input("Enter second number :"))
+if (op=='+') :
+    print(a+b)
+elif (op=='-') :
+    print(a-b)
+elif(op=='*') :
+    print(a*b)
+elif (op=='/') :
+    if (b==0) :
+        print("Cannot divide by 0")
+    else :
+        print(a/b) 
+else :
+    print("Invalid operator")
+
+#Question 25 - Write a program that copies the contents of one text file to another. 
+file1 = open("file1.txt",'w')
+file1.write("Hello everyone! This is the text to be copied")
+file1.close()
+file2=open("file2.txt",'w')
+file1=open("file1.txt","r")
+file2.write(file1.read())
+file1.close()
+file2.close()
+
+#Question 26 - Write a program in python that checks if a string starts with a given prefix or ends with a given suffix. 
+str=input("Enter a string:")
+prefix=input("Enter a prefix :")
+suffix=input("Enter a suffix :")
+print(str.startswith(prefix) or str.endswith(suffix))
+
+#Question 27 - Write a program in python that converts a string into a list of its characters. 
+str=input("Enter a string:")
+lst=[]
+for i in str:
+    lst.append(i)
+print(lst)
