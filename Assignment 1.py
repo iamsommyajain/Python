@@ -50,4 +50,63 @@ str=input("Enter string :")
 print(str.upper())
 
 #Question 11 - Write a python program that generates the first n numbers in the Fibonacci sequence. 
+n=int(input("Enter number of terms :"))
+a=1
+b=1
+c=a+b
+print(a,end=" ")
+print(b,end=" ")
+for i in range(n-2):
+    c=a+b
+    print(c,end=" ")
+    a=b
+    b=c
 
+#Question 12 - Write a python program that calculates the sum of the digits of a given number. 
+num=int(input("Enter number :"))
+sum=0
+while num>0 :
+    digit=num%10
+    sum+=digit
+    num//=10
+print("Sum of digits of the given number :",sum)
+
+#Question 13 - Write a program that asks the user for their birth year and calculates their age. 
+year=int(input("Enter year of birth :"))
+age=2024-year
+print("Age :",age)
+
+#Question 14 - Write a program that reads multiple lines of input from the user until they enter an empty line, then prints all the lines.
+lines=[]
+while True:
+    line=input("Enter a line of input :")
+    if line=='':
+        break
+    lines.append(line)
+for line in lines :
+    print(line)
+
+#Question 15 - Write a program that reads data from a CSV file and prints it to the console. 
+import csv 
+samplefile=open("samplefile.csv","w")
+samplefile.write("Hello my name is Sommya Jain.\n")
+samplefile.close()
+samplefile=open("samplefile.csv","r")
+print(samplefile.read())
+samplefile.close()
+
+#Question 16 - Write a program in python that counts the frequency of each character in a string. 
+dic={}
+str=input("Enter a string :")
+for i in str :
+    if i in dic :
+        dic[i]+=1
+    else :
+        dic[i]=1
+print(dic)
+
+#Question 17 - Write a program in python that converts a given string to title case (first letter of each word capitalized). 
+str=input("Enter a string :")
+print(str.title())
+
+#Question 18 - Write a python program that checks if two strings are anagrams of each other. 
